@@ -2,9 +2,37 @@ import fetch from "node-fetch";
 import { parser } from "./parser.js";
 
 export async function crawl({ url }) {
-  const pageHTML = await fetch(url).then((response) => response.text());
+  console.log("Crawling to :", url);
 
-  const scrapedData = parser(pageHTML);
+  try {
+    const response = await fetch(url);
 
-  return scrapedData;
+    const contentType = response.headers.get("content-type");
+
+    if (response.status > 399) {
+      console.log(
+        `Error occured in fetch with status code : ${response.status} on ${url}`
+      );
+
+      return;
+    }
+
+    if (contentType !== "text/html") {
+      console.log(
+        `No HTML response found, content type ${contentType} on ${url}`
+      );
+
+      return;
+    }
+
+    const html = await response.text();
+
+    const scrapedData = parser(html);
+
+    return scrapedData;
+  } catch (error) {
+    console.log(
+      `Error occured in fetch with status code : ${error.message} on ${url}`
+    );
+  }
 }
