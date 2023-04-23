@@ -1,21 +1,9 @@
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
-
-const headers = {
-  "tarih(ts)": "date",
-  enlem: "latitude",
-  boylam: "longitude",
-  "derinlik(km)": "depth",
-  tip: "type",
-  büyüklük: "size",
-  yer: "location",
-  "deprem id": "id",
-};
+import { headers } from "./constants.js";
 
 export async function crawl({ url }) {
-  const pageHTML = await fetch(url)
-    .then((response) => response.text())
-    .then((html) => html);
+  const pageHTML = await fetch(url).then((response) => response.text());
 
   const $ = cheerio.load(pageHTML);
 
