@@ -10,7 +10,6 @@ export async function crawl({ url }) {
 
     const parsed = parse(html);
 
-    debugger;
     return parsed;
   } catch (error) {
     errorHandler(error);
