@@ -1,8 +1,9 @@
 import { crawl } from "./crawl.js";
+import { url } from "./constants.js";
 
 async function main() {
   const tableData = await crawl({
-    url: "https://deprem.afad.gov.tr/last-earthquakes.html",
+    url,
   });
 
   console.log(tableData);

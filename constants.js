@@ -8,3 +8,5 @@ export const headers = {
   yer: "location",
   "deprem id": "id",
 };
+
+export const url = "https://deprem.afad.gov.tr/last-earthquakes.html";
