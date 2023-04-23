@@ -1,3 +1,5 @@
+export const url = "https://deprem.afad.gov.tr/last-earthquakes.html";
+
 export const headers = {
   "tarih(ts)": "date",
   enlem: "latitude",
@@ -8,5 +10,3 @@ export const headers = {
   yer: "location",
   "deprem id": "id",
 };
-
-export const url = "https://deprem.afad.gov.tr/last-earthquakes.html";

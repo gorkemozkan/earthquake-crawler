@@ -2,13 +2,11 @@ import { crawl } from "./crawl.js";
 import { url } from "./constants.js";
 
 async function main() {
-  const tableData = await crawl({
+  const crawledData = await crawl({
     url,
   });
 
-  console.log(tableData);
+  return crawledData;
 }
 
-main().catch((error) => {
-  console.log(error);
-});
+main();
