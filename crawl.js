@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { parser } from "./parser.js";
+import { parse } from "./parse.js";
 import { errorHandler } from "./errorHandler.js";
 
 export async function crawl({ url }) {
@@ -8,7 +8,10 @@ export async function crawl({ url }) {
 
     const html = await response.text();
 
-    return parser(html);
+    const parsed = parse(html);
+
+    debugger;
+    return parsed;
   } catch (error) {
     errorHandler(error);
   }
