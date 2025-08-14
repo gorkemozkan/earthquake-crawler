@@ -27,26 +27,25 @@
     "turkey",
     "typescript"
   ],
-  "author": "Your Name",
+  "author": "Görkem Özkan",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "eslint": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "tsx": "^4.0.0",
-    "typescript": "^5.0.0"
+    "@types/node": "20.0.0",
+    "eslint": "8.0.0",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "tsx": "4.0.0",
+    "typescript": "5.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/kandilli-earthquake-crawler.git"
+    "url": "https://github.com/gorkemozkan/earthquake-crawler"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/kandilli-earthquake-crawler/issues"
-  },
-  "homepage": "https://github.com/yourusername/kandilli-earthquake-crawler#readme"
+    "url": "https://github.com/gorkemozkan/earthquake-crawler/issues"
+  }
 }
