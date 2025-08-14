@@ -1,0 +1,52 @@
+{
+  "name": "earthquake-crawler",
+  "version": "1.0.0",
+  "description": "Modular earthquake data crawler for Kandilli Observatory with filtering and reporting capabilities",
+  "type": "module",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "tsx src/app.ts --debug",
+    "dev:watch": "tsx watch src/app.ts --debug",
+    "test-connectivity": "tsx src/app.ts --test-connectivity",
+    "no-filter": "tsx src/app.ts --no-filter",
+    "json-only": "tsx src/app.ts --no-markdown",
+    "markdown-only": "tsx src/app.ts --no-json",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "earthquake",
+    "kandilli",
+    "crawler",
+    "data-processing",
+    "izmir",
+    "turkey",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/kandilli-earthquake-crawler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/kandilli-earthquake-crawler/issues"
+  },
+  "homepage": "https://github.com/yourusername/kandilli-earthquake-crawler#readme"
+}
