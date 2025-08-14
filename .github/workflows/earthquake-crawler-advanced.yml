@@ -1,0 +1,116 @@
+name: Earthquake Data Crawler (Advanced)
+
+on:
+  schedule:
+    # Run every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allow manual triggering
+
+env:
+  NODE_ENV: production
+
+jobs:
+  crawl-earthquake-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Full history for git operations
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Type check
+        run: npm run type-check
+        
+      - name: Lint code
+        run: npm run lint
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Test connectivity
+        run: npm run test-connectivity
+        continue-on-error: true
+        
+      - name: Run earthquake crawler
+        id: crawler
+        run: |
+          echo "Starting earthquake data crawl at $(date)"
+          npm start
+          echo "Crawl completed at $(date)"
+        continue-on-error: true
+        
+      - name: Check for new data
+        id: check-data
+        run: |
+          if git diff --quiet; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+            echo "No new earthquake data found"
+          else
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+            echo "New earthquake data detected"
+          fi
+          
+      - name: Upload generated files as artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: earthquake-data-$(date +%Y%m%d-%H%M%S)
+          path: |
+            *.json
+            *.md
+            reports/
+            logs/
+          retention-days: 30
+          
+      - name: Commit and push changes
+        if: steps.check-data.outputs.no_changes == 'false' && success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "📊 Update earthquake data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
+          
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Earthquake Crawler Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Run Time:** $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** ${{ steps.crawler.outcome }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **New Data:** ${{ steps.check-data.outputs.no_changes == 'false' && 'Yes' || 'No' }}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.check-data.outputs.no_changes }}" = "false" ]; then
+            echo "- **Changes Committed:** Yes" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Changes Committed:** No (no new data)" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Notify on failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          text: "❌ Earthquake crawler failed at $(date)"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        continue-on-error: true
+        
+      - name: Notify on success with new data
+        if: success() && steps.check-data.outputs.no_changes == 'false'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: success
+          text: "✅ New earthquake data collected and committed at $(date)"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        continue-on-error: true
