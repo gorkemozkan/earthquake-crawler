@@ -63,20 +63,16 @@ export class ReportGeneratorService implements IReportGeneratorService {
     if (subtitle) markdown += `${subtitle}\n\n`;
     markdown += `**Toplam Deprem Sayısı:** ${earthquakes.length}\n\n`;
 
-    // Data range information
     if (earthquakes.length > 0) {
       markdown += this.generateDataRangeInfo(earthquakes);
     }
 
-    // Summary statistics
     if (earthquakes.length > 0) {
       markdown += this.generateSummaryStatistics(earthquakes);
     }
 
-    // Earthquake table
     markdown += this.generateEarthquakeTable(earthquakes);
 
-    // Detailed information
     markdown += this.generateDetailedInformation(earthquakes);
 
     return markdown;
@@ -90,7 +86,9 @@ export class ReportGeneratorService implements IReportGeneratorService {
     if (magnitudes.length === 0) return '';
 
     const maxMag = Math.max(...magnitudes);
+
     const minMag = Math.min(...magnitudes);
+    
     const avgMag = (magnitudes.reduce((a, b) => a + b, 0) / magnitudes.length).toFixed(2);
     
     let stats = `## Özet İstatistikler\n\n`;

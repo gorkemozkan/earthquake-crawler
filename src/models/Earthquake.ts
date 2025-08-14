@@ -1,8 +1,4 @@
-import type { 
-  EarthquakeData, 
-  EarthquakeCoordinates, 
-  EarthquakeSummary 
-} from '../types/index.js';
+import type { EarthquakeData, EarthquakeSummary } from '../types/index.js';
 
 export class Earthquake implements EarthquakeData {
   public readonly datetime: string;

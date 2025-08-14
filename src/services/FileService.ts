@@ -14,7 +14,6 @@ export class FileService implements IFileService {
     this.defaultEncoding = 'utf8';
   }
 
-
   public saveFile(content: string, filename: string, directory?: string, options: FileOptions = {}): string | null {
           const { encoding = this.defaultEncoding, overwrite = true } = options;
     

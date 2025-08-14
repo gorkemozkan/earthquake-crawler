@@ -4,7 +4,7 @@ import type {
   FilterCriteria, 
   FilterStatistics 
 } from '../types/index.js';
-import { DEBUG_CONFIG } from '../config/constants.js';
+import { DEBUG_CONFIG, IZMIR_SPECIFIC_KEYWORDS } from '../config/constants.js';
 
 type FilterFunction = (earthquakes: EarthquakeData[], criteria: any) => EarthquakeData[];
 
@@ -56,30 +56,7 @@ export class EarthquakeFilterService implements IEarthquakeFilterService {
         return false;
       }
       
-      const izmirSpecificKeywords = [
-        'çeşme', 'cesme',
-        'foça', 'foca',
-        'karaburun',
-        'urla',
-        'seferihisar',
-        'dikili',
-        'bornova',
-        'karşıyaka', 'karsiyaka',
-        'konak',
-        'buca',
-        'gaziemir',
-        'karabağlar', 'karabaglar',
-        'alsancak',
-        'göztepe', 'goztepe',
-        'bostanlı', 'bostanli',
-        'çiğli', 'cigli',
-        'çeşmealtı', 'cesmealti',
-        'sığacık', 'sigacik',
-        'gümüldür', 'gumuldur',
-        'zeytinler'
-      ];
-      
-      return izmirSpecificKeywords.some(keyword => location.includes(keyword));
+      return IZMIR_SPECIFIC_KEYWORDS.some(keyword => location.includes(keyword));
     });
 
     if (debug) {

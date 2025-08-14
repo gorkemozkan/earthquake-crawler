@@ -18,6 +18,7 @@ export class DataFetcherService implements IDataFetcherService {
     for (const url of this.sources) {
       try {
         console.log(`Veri kaynağı deneniyor: ${url}`);
+        
         const response = await fetch(url, this.config);
         
         if (!response.ok) {
@@ -26,11 +27,15 @@ export class DataFetcherService implements IDataFetcherService {
         }
         
         const html = await response.text();
+
         console.log(`Veri başarıyla alındı: ${url}`);
+
         return { url, html };
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
-          console.log(`${url} hatası: ${errorMessage}`);
+
+        console.log(`${url} hatası: ${errorMessage}`);
+
         continue;
       }
     }
@@ -52,7 +57,9 @@ export class DataFetcherService implements IDataFetcherService {
     for (const url of this.sources) {
       try {
         const startTime = Date.now();
+
         const response = await fetch(url, { ...this.config, method: 'HEAD' });
+
         const endTime = Date.now();
         
         results.push({
@@ -63,6 +70,7 @@ export class DataFetcherService implements IDataFetcherService {
         });
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
+
         results.push({
           url,
           accessible: false,

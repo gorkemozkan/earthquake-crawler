@@ -1,4 +1,3 @@
-
 export interface EarthquakeData {
   datetime: string;
   date: string;
@@ -110,7 +109,6 @@ export interface AppConstants {
   DEBUG_CONFIG: DebugConfig;
 }
 
-
 export interface AppOptions {
   filterByIzmir?: boolean;
   generateJson?: boolean;
@@ -118,7 +116,6 @@ export interface AppOptions {
   debug?: boolean;
   testConnectivity?: boolean;
 }
-
 
 export interface ProcessingResults {
   source: string;
@@ -136,12 +133,10 @@ export interface ProcessingResults {
   };
 }
 
-
 export interface FileOptions {
   encoding?: BufferEncoding;
   overwrite?: boolean;
 }
-
 
 export interface FileInfo {
   size: number;
@@ -151,12 +146,10 @@ export interface FileInfo {
   isDirectory: boolean;
 }
 
-
 export interface ListFilesOptions {
   pattern?: string;
   recursive?: boolean;
 }
-
 
 export interface IDataFetcherService {
   fetchHtml(): Promise<{ url: string; html: string }>;
@@ -197,7 +190,6 @@ export interface IFileService {
   createBackup(filepath: string, backupSuffix?: string): string | null;
   setDefaultEncoding(encoding: string): void;
 }
-
 
 export interface ServiceContainer {
   dataFetcher: IDataFetcherService;

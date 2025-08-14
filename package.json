@@ -13,8 +13,6 @@
     "no-filter": "tsx src/app.ts --no-filter",
     "json-only": "tsx src/app.ts --no-markdown",
     "markdown-only": "tsx src/app.ts --no-json",
-    "lint": "eslint src/ --ext .ts",
-    "lint:fix": "eslint src/ --ext .ts --fix",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
@@ -35,9 +33,6 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "eslint": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },
