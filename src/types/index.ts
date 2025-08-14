@@ -156,6 +156,9 @@ export interface IDataFetcherService {
   setSources(sources: string[]): void;
   setHttpConfig(config: Partial<HttpConfig>): void;
   testConnectivity(): Promise<ConnectivityResult[]>;
+  clearCache(): void;
+  setCacheTimeout(timeout: number): void;
+  abortAllConnections(): void;
 }
 
 export interface IEarthquakeParserService {
@@ -164,6 +167,9 @@ export interface IEarthquakeParserService {
   parseLine(line: string): EarthquakeData | null;
   getStatistics(): ParsingStatistics;
   resetStatistics(): void;
+  clearCache(): void;
+  setBatchSize(size: number): void;
+  getCacheSize(): number;
 }
 
 export interface IEarthquakeFilterService {
@@ -171,6 +177,9 @@ export interface IEarthquakeFilterService {
   registerFilter(name: string, filterFunction: (earthquakes: EarthquakeData[], criteria: any) => EarthquakeData[]): void;
   getAvailableFilters(): string[];
   getFilterStatistics(original: EarthquakeData[], filtered: EarthquakeData[]): FilterStatistics;
+  clearCache(): void;
+  setBatchSize(size: number): void;
+  getCacheSize(): number;
 }
 
 export interface IReportGeneratorService {
@@ -178,17 +187,30 @@ export interface IReportGeneratorService {
   generateMarkdownReport(earthquakes: EarthquakeData[], metadata?: ReportMetadata): string;
   generateFilename(isFiltered?: boolean): string;
   setTimezoneConfig(config: Partial<TimezoneConfig>): void;
+  clearCache(): void;
+  setBatchSize(size: number): void;
+  getCacheSize(): number;
 }
 
 export interface IFileService {
   saveFile(content: string, filename: string, directory?: string, options?: FileOptions): string | null;
+  saveFileAsync(content: string, filename: string, directory?: string, options?: FileOptions): Promise<string | null>;
   readFile(filepath: string, options?: FileOptions): string | null;
+  readFileAsync(filepath: string, options?: FileOptions): Promise<string | null>;
   deleteFile(filepath: string): boolean;
+  deleteFileAsync(filepath: string): Promise<boolean>;
   fileExists(filepath: string): boolean;
+  fileExistsAsync(filepath: string): Promise<boolean>;
   getFileInfo(filepath: string): FileInfo | null;
+  getFileInfoAsync(filepath: string): Promise<FileInfo | null>;
   listFiles(directory: string, options?: ListFilesOptions): string[];
+  listFilesAsync(directory: string, options?: ListFilesOptions): Promise<string[]>;
   createBackup(filepath: string, backupSuffix?: string): string | null;
+  createBackupAsync(filepath: string, backupSuffix?: string): Promise<string | null>;
   setDefaultEncoding(encoding: string): void;
+  clearCache(): void;
+  setCacheTimeout(timeout: number): void;
+  getCacheSize(): number;
 }
 
 export interface ServiceContainer {

@@ -13,6 +13,8 @@
     "no-filter": "tsx src/app.ts --no-filter",
     "json-only": "tsx src/app.ts --no-markdown",
     "markdown-only": "tsx src/app.ts --no-json",
+    "performance-test": "tsx src/performance-test.ts",
+    "performance-test:build": "npm run build && node dist/performance-test.js",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist"
   },

@@ -7,13 +7,23 @@ import type {
 import { parseNumber, extractPreBlock, isValidEarthquakeLine } from '../utils/helpers.js';
 import { Earthquake } from '../models/Earthquake.js';
 
+interface ParsingCache {
+  [key: string]: EarthquakeData;
+}
+
 export class EarthquakeParserService implements IEarthquakeParserService {
   private parsedCount: number;
   private errorCount: number;
+  private parsingCache: ParsingCache;
+  private batchSize: number;
+  private regexCache: Map<string, RegExp>;
 
   constructor() {
     this.parsedCount = 0;
     this.errorCount = 0;
+    this.parsingCache = {};
+    this.batchSize = 1000; // Process in batches of 1000
+    this.regexCache = new Map();
   }
 
   public parseFromHtml(html: string): EarthquakeData[] {
@@ -33,11 +43,25 @@ export class EarthquakeParserService implements IEarthquakeParserService {
     this.parsedCount = 0;
     this.errorCount = 0;
 
+    // Process lines in batches for better memory management
+    for (let i = 0; i < lines.length; i += this.batchSize) {
+      const batch = lines.slice(i, i + this.batchSize);
+      const batchResults = this.processBatch(batch);
+      earthquakes.push(...batchResults);
+    }
+    
+    console.log(`Parse sonucu: ${this.parsedCount} başarılı, ${this.errorCount} hatalı`);
+    return earthquakes;
+  }
+
+  private processBatch(lines: string[]): EarthquakeData[] {
+    const batchResults: EarthquakeData[] = [];
+    
     for (const line of lines) {
       try {
         const earthquake = this.parseLine(line);
         if (earthquake && earthquake.isValid()) {
-          earthquakes.push(earthquake.toObject());
+          batchResults.push(earthquake.toObject());
           this.parsedCount++;
         }
       } catch (error) {
@@ -47,13 +71,18 @@ export class EarthquakeParserService implements IEarthquakeParserService {
       }
     }
     
-    console.log(`Parse sonucu: ${this.parsedCount} başarılı, ${this.errorCount} hatalı`);
-    return earthquakes;
+    return batchResults;
   }
 
   public parseLine(line: string): Earthquake | null {
     if (!isValidEarthquakeLine(line)) {
       return null;
+    }
+
+    // Check cache first
+    const cacheKey = this.generateCacheKey(line);
+    if (this.parsingCache[cacheKey]) {
+      return Earthquake.fromParsedRow(this.parsingCache[cacheKey]);
     }
 
     const parts = line.trim().split(/\s+/);
@@ -97,11 +126,28 @@ export class EarthquakeParserService implements IEarthquakeParserService {
       source: "KOERI",
     };
 
+    // Cache the result
+    this.parsingCache[cacheKey] = earthquakeData;
+
     return Earthquake.fromParsedRow(earthquakeData);
   }
 
+  private generateCacheKey(line: string): string {
+    // Use a simple hash for caching
+    let hash = 0;
+    for (let i = 0; i < line.length; i++) {
+      const char = line.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32-bit integer
+    }
+    return hash.toString();
+  }
+
   private extractStatus(details: string): StatusInfo {
-    const statusMatch = details.match(/\b(İlksel|ILKSEL|İLKSEL|REVIZE\d*|REVIZE)\b/i);
+    // Use cached regex for better performance
+    const statusRegex = this.getCachedRegex('status', /\b(İlksel|ILKSEL|İLKSEL|REVIZE\d*|REVIZE)\b/i);
+    const statusMatch = details.match(statusRegex);
+    
     if (statusMatch) {
       return {
         status: statusMatch[0],
@@ -115,8 +161,17 @@ export class EarthquakeParserService implements IEarthquakeParserService {
   }
 
   private extractProvince(details: string): string | null {
-    const provinceMatch = details.match(/\(([^)]+)\)\s*$/);
+    // Use cached regex for better performance
+    const provinceRegex = this.getCachedRegex('province', /\(([^)]+)\)\s*$/);
+    const provinceMatch = details.match(provinceRegex);
     return provinceMatch && provinceMatch[1] ? provinceMatch[1] : null;
+  }
+
+  private getCachedRegex(name: string, regex: RegExp): RegExp {
+    if (!this.regexCache.has(name)) {
+      this.regexCache.set(name, regex);
+    }
+    return this.regexCache.get(name)!;
   }
 
   public getStatistics(): ParsingStatistics {
@@ -131,5 +186,17 @@ export class EarthquakeParserService implements IEarthquakeParserService {
   public resetStatistics(): void {
     this.parsedCount = 0;
     this.errorCount = 0;
+  }
+
+  public clearCache(): void {
+    this.parsingCache = {};
+  }
+
+  public setBatchSize(size: number): void {
+    this.batchSize = size;
+  }
+
+  public getCacheSize(): number {
+    return Object.keys(this.parsingCache).length;
   }
 }
