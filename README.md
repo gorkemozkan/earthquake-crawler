@@ -1,14 +1,14 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 19.08.2025 18:04:41
+**Son Güncelleme:** 19.08.2025 18:36:09
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 19.08.2025 18:04:41
+**Son Veri Çekme:** 19.08.2025 18:36:09
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 2
+**Toplam Deprem Sayısı:** 3
 
 ## Veri Aralığı
 
@@ -20,16 +20,17 @@
 
 - **En Yüksek Büyüklük:** 2.3
 - **En Düşük Büyüklük:** 1.6
-- **Ortalama Büyüklük:** 1.95
-- **En Derin:** 6.2 km
+- **Ortalama Büyüklük:** 2.00
+- **En Derin:** 10.4 km
 - **En Sığ:** 5 km
-- **Ortalama Derinlik:** 5.60 km
+- **Ortalama Derinlik:** 7.20 km
 
 ## Deprem Listesi
 
 | Tarih | Saat | Büyüklük | Derinlik (km) | Enlem | Boylam | Konum | Durum |
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.08.19 | 17:40:40 | 2.3 | 5 | 38.1315 | 27.2555 | KARAKUYU-MENDERES (IZMIR) �lksel | - |
+| 2025.08.19 | 17:27:06 | 2.1 | 10.4 | 38.656 | 26.7413 | FOCA (IZMIR) �lksel | - |
 | 2025.08.19 | 04:13:23 | 1.6 | 6.2 | 38.038 | 27.1253 | CILE-MENDERES (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
@@ -47,6 +48,18 @@
 - **Kaynak:** KOERI
 
 ### 2. Deprem
+
+- **Tarih ve Saat:** 2025.08.19 17:27:06
+- **ISO Zaman:** 2025-08-19T14:27:06.000Z
+- **Konum:** 38.656, 26.7413
+- **Derinlik:** 10.4 km
+- **Büyüklükler:** MD: -, ML: 2.1, MW: -
+- **Tercih Edilen Büyüklük:** 2.1
+- **Yer:** FOCA (IZMIR) �lksel
+- **Durum:** -
+- **Kaynak:** KOERI
+
+### 3. Deprem
 
 - **Tarih ve Saat:** 2025.08.19 04:13:23
 - **ISO Zaman:** 2025-08-19T01:13:23.000Z
