@@ -1,36 +1,35 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 29.08.2025 09:40:41
+**Son Güncelleme:** 29.08.2025 10:04:42
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 29.08.2025 09:40:41
+**Son Veri Çekme:** 29.08.2025 10:04:42
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 2
+**Toplam Deprem Sayısı:** 1
 
 ## Veri Aralığı
 
-- **En Eski Deprem:** 27.08.2025 06:00:36
+- **En Eski Deprem:** 27.08.2025 06:54:23
 - **En Yeni Deprem:** 27.08.2025 06:54:23
 - **Veri Aralığı:** 27.08.2025 - 27.08.2025
 
 ## Özet İstatistikler
 
-- **En Yüksek Büyüklük:** 2.4
+- **En Yüksek Büyüklük:** 1.9
 - **En Düşük Büyüklük:** 1.9
-- **Ortalama Büyüklük:** 2.15
-- **En Derin:** 12.6 km
+- **Ortalama Büyüklük:** 1.90
+- **En Derin:** 9.2 km
 - **En Sığ:** 9.2 km
-- **Ortalama Derinlik:** 10.90 km
+- **Ortalama Derinlik:** 9.20 km
 
 ## Deprem Listesi
 
 | Tarih | Saat | Büyüklük | Derinlik (km) | Enlem | Boylam | Konum | Durum |
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.08.27 | 06:54:23 | 1.9 | 9.2 | 38.979 | 27.0732 | ZEYTINDAG-BERGAMA (IZMIR) �lksel | - |
-| 2025.08.27 | 06:00:36 | 2.4 | 12.6 | 38.975 | 27.0345 | TEKKEDERE-BERGAMA (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
 
@@ -43,18 +42,6 @@
 - **Büyüklükler:** MD: -, ML: 1.9, MW: -
 - **Tercih Edilen Büyüklük:** 1.9
 - **Yer:** ZEYTINDAG-BERGAMA (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 2. Deprem
-
-- **Tarih ve Saat:** 2025.08.27 06:00:36
-- **ISO Zaman:** 2025-08-27T03:00:36.000Z
-- **Konum:** 38.975, 27.0345
-- **Derinlik:** 12.6 km
-- **Büyüklükler:** MD: -, ML: 2.4, MW: -
-- **Tercih Edilen Büyüklük:** 2.4
-- **Yer:** TEKKEDERE-BERGAMA (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
