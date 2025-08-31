@@ -1,14 +1,14 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 31.08.2025 11:35:51
+**Son Güncelleme:** 31.08.2025 12:04:11
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 31.08.2025 11:35:51
+**Son Veri Çekme:** 31.08.2025 12:04:11
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 5
+**Toplam Deprem Sayısı:** 4
 
 ## Veri Aralığı
 
@@ -18,12 +18,12 @@
 
 ## Özet İstatistikler
 
-- **En Yüksek Büyüklük:** 3
+- **En Yüksek Büyüklük:** 2.8
 - **En Düşük Büyüklük:** 1.7
-- **Ortalama Büyüklük:** 1.98
+- **Ortalama Büyüklük:** 2.00
 - **En Derin:** 11 km
-- **En Sığ:** 5 km
-- **Ortalama Derinlik:** 7.78 km
+- **En Sığ:** 7 km
+- **Ortalama Derinlik:** 8.55 km
 
 ## Deprem Listesi
 
@@ -31,8 +31,7 @@
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.08.30 | 01:54:12 | 1.7 | 11 | 37.914 | 27.3788 | ACARLAR-SELCUK (IZMIR) �lksel | - |
 | 2025.08.30 | 01:34:41 | 1.7 | 7.6 | 37.923 | 27.2978 | SULTANIYE-SELCUK (IZMIR) �lksel | - |
-| 2025.08.30 | 01:23:30 | 3 | 8.3 | 37.9068 | 27.301 | SULTANIYE-SELCUK (IZMIR) �lksel | - |
-| 2025.08.30 | 01:05:14 | 1.7 | 5 | 37.9523 | 27.2453 | ZEYTINKOY-SELCUK (IZMIR) �lksel | - |
+| 2025.08.30 | 01:23:30 | 2.8 | 8.6 | 37.9037 | 27.2983 | SULTANIYE-SELCUK (IZMIR) �lksel | - |
 | 2025.08.29 | 16:25:46 | 1.8 | 7 | 37.9278 | 27.2717 | ZEYTINKOY-SELCUK (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
@@ -65,27 +64,15 @@
 
 - **Tarih ve Saat:** 2025.08.30 01:23:30
 - **ISO Zaman:** 2025-08-29T22:23:30.000Z
-- **Konum:** 37.9068, 27.301
-- **Derinlik:** 8.3 km
-- **Büyüklükler:** MD: -, ML: 3, MW: -
-- **Tercih Edilen Büyüklük:** 3
+- **Konum:** 37.9037, 27.2983
+- **Derinlik:** 8.6 km
+- **Büyüklükler:** MD: -, ML: 2.8, MW: -
+- **Tercih Edilen Büyüklük:** 2.8
 - **Yer:** SULTANIYE-SELCUK (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
 ### 4. Deprem
-
-- **Tarih ve Saat:** 2025.08.30 01:05:14
-- **ISO Zaman:** 2025-08-29T22:05:14.000Z
-- **Konum:** 37.9523, 27.2453
-- **Derinlik:** 5 km
-- **Büyüklükler:** MD: -, ML: 1.7, MW: -
-- **Tercih Edilen Büyüklük:** 1.7
-- **Yer:** ZEYTINKOY-SELCUK (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 5. Deprem
 
 - **Tarih ve Saat:** 2025.08.29 16:25:46
 - **ISO Zaman:** 2025-08-29T13:25:46.000Z
