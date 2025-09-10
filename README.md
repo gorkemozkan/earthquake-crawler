@@ -1,10 +1,10 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 10.09.2025 03:48:29
+**Son Güncelleme:** 10.09.2025 04:32:23
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 10.09.2025 03:48:29
+**Son Veri Çekme:** 10.09.2025 04:32:23
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
