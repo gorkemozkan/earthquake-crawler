@@ -1,29 +1,29 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 15.09.2025 03:18:59
+**Son Güncelleme:** 15.09.2025 03:49:01
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 15.09.2025 03:18:59
+**Son Veri Çekme:** 15.09.2025 03:49:01
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 3
+**Toplam Deprem Sayısı:** 2
 
 ## Veri Aralığı
 
-- **En Eski Deprem:** 11.09.2025 10:31:45
+- **En Eski Deprem:** 12.09.2025 11:14:55
 - **En Yeni Deprem:** 13.09.2025 03:14:53
-- **Veri Aralığı:** 11.09.2025 - 13.09.2025
+- **Veri Aralığı:** 12.09.2025 - 13.09.2025
 
 ## Özet İstatistikler
 
-- **En Yüksek Büyüklük:** 1.7
+- **En Yüksek Büyüklük:** 1.5
 - **En Düşük Büyüklük:** 1.5
-- **Ortalama Büyüklük:** 1.57
+- **Ortalama Büyüklük:** 1.50
 - **En Derin:** 17.8 km
-- **En Sığ:** 0 km
-- **Ortalama Derinlik:** 7.70 km
+- **En Sığ:** 5.3 km
+- **Ortalama Derinlik:** 11.55 km
 
 ## Deprem Listesi
 
@@ -31,7 +31,6 @@
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.09.13 | 03:14:53 | 1.5 | 17.8 | 38.3132 | 27.2457 | BELENBASI-BUCA (IZMIR) �lksel | - |
 | 2025.09.12 | 11:14:55 | 1.5 | 5.3 | 38.184 | 27.3182 | KAPLANCIK-TORBALI (IZMIR) �lksel | - |
-| 2025.09.11 | 10:31:45 | 1.7 | - | 39.0958 | 27.5105 | ARPASEKI-KINIK (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
 
@@ -56,18 +55,6 @@
 - **Büyüklükler:** MD: -, ML: 1.5, MW: -
 - **Tercih Edilen Büyüklük:** 1.5
 - **Yer:** KAPLANCIK-TORBALI (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 3. Deprem
-
-- **Tarih ve Saat:** 2025.09.11 10:31:45
-- **ISO Zaman:** 2025-09-11T07:31:45.000Z
-- **Konum:** 39.0958, 27.5105
-- **Derinlik:** - km
-- **Büyüklükler:** MD: -, ML: 1.7, MW: -
-- **Tercih Edilen Büyüklük:** 1.7
-- **Yer:** ARPASEKI-KINIK (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
