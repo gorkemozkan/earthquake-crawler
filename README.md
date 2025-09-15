@@ -1,34 +1,35 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 15.09.2025 13:05:22
+**Son Güncelleme:** 15.09.2025 13:37:19
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 15.09.2025 13:05:22
+**Son Veri Çekme:** 15.09.2025 13:37:19
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 4
+**Toplam Deprem Sayısı:** 5
 
 ## Veri Aralığı
 
 - **En Eski Deprem:** 12.09.2025 11:14:55
-- **En Yeni Deprem:** 15.09.2025 10:14:54
+- **En Yeni Deprem:** 15.09.2025 13:19:01
 - **Veri Aralığı:** 12.09.2025 - 15.09.2025
 
 ## Özet İstatistikler
 
-- **En Yüksek Büyüklük:** 1.7
+- **En Yüksek Büyüklük:** 3.1
 - **En Düşük Büyüklük:** 1.3
-- **Ortalama Büyüklük:** 1.50
+- **Ortalama Büyüklük:** 1.82
 - **En Derin:** 17.8 km
 - **En Sığ:** 5.3 km
-- **Ortalama Derinlik:** 11.95 km
+- **Ortalama Derinlik:** 11.16 km
 
 ## Deprem Listesi
 
 | Tarih | Saat | Büyüklük | Derinlik (km) | Enlem | Boylam | Konum | Durum |
 |-------|------|----------|---------------|-------|--------|-------|-------|
+| 2025.09.15 | 13:19:01 | 3.1 | 8 | 38.3348 | 27.2585 | BELENBASI-BUCA (IZMIR) �lksel | - |
 | 2025.09.15 | 10:14:54 | 1.7 | 9.4 | 38.1395 | 27.395 | TORBALI (IZMIR) �lksel | - |
 | 2025.09.15 | 06:42:13 | 1.3 | 15.3 | 38.2942 | 27.341 | DOGANCILAR-BUCA (IZMIR) �lksel | - |
 | 2025.09.13 | 03:14:53 | 1.5 | 17.8 | 38.3132 | 27.2457 | BELENBASI-BUCA (IZMIR) �lksel | - |
@@ -37,6 +38,18 @@
 ## Detaylı Bilgiler
 
 ### 1. Deprem
+
+- **Tarih ve Saat:** 2025.09.15 13:19:01
+- **ISO Zaman:** 2025-09-15T10:19:01.000Z
+- **Konum:** 38.3348, 27.2585
+- **Derinlik:** 8 km
+- **Büyüklükler:** MD: -, ML: 3.1, MW: 3
+- **Tercih Edilen Büyüklük:** 3.1
+- **Yer:** BELENBASI-BUCA (IZMIR) �lksel
+- **Durum:** -
+- **Kaynak:** KOERI
+
+### 2. Deprem
 
 - **Tarih ve Saat:** 2025.09.15 10:14:54
 - **ISO Zaman:** 2025-09-15T07:14:54.000Z
@@ -48,7 +61,7 @@
 - **Durum:** -
 - **Kaynak:** KOERI
 
-### 2. Deprem
+### 3. Deprem
 
 - **Tarih ve Saat:** 2025.09.15 06:42:13
 - **ISO Zaman:** 2025-09-15T03:42:13.000Z
@@ -60,7 +73,7 @@
 - **Durum:** -
 - **Kaynak:** KOERI
 
-### 3. Deprem
+### 4. Deprem
 
 - **Tarih ve Saat:** 2025.09.13 03:14:53
 - **ISO Zaman:** 2025-09-13T00:14:53.000Z
@@ -72,7 +85,7 @@
 - **Durum:** -
 - **Kaynak:** KOERI
 
-### 4. Deprem
+### 5. Deprem
 
 - **Tarih ve Saat:** 2025.09.12 11:14:55
 - **ISO Zaman:** 2025-09-12T08:14:55.000Z
