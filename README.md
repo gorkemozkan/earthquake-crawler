@@ -1,29 +1,29 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 19.09.2025 22:33:11
+**Son Güncelleme:** 19.09.2025 23:04:57
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 19.09.2025 22:33:11
+**Son Veri Çekme:** 19.09.2025 23:04:57
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 5
+**Toplam Deprem Sayısı:** 4
 
 ## Veri Aralığı
 
-- **En Eski Deprem:** 15.09.2025 06:42:13
+- **En Eski Deprem:** 15.09.2025 10:14:54
 - **En Yeni Deprem:** 18.09.2025 23:23:50
 - **Veri Aralığı:** 15.09.2025 - 18.09.2025
 
 ## Özet İstatistikler
 
 - **En Yüksek Büyüklük:** 3.1
-- **En Düşük Büyüklük:** 1.3
-- **Ortalama Büyüklük:** 1.82
-- **En Derin:** 15.3 km
+- **En Düşük Büyüklük:** 1.5
+- **Ortalama Büyüklük:** 1.95
+- **En Derin:** 9.4 km
 - **En Sığ:** 5 km
-- **Ortalama Derinlik:** 9.26 km
+- **Ortalama Derinlik:** 7.75 km
 
 ## Deprem Listesi
 
@@ -33,7 +33,6 @@
 | 2025.09.18 | 01:05:28 | 1.5 | 5 | 39.012 | 27.5167 | YAYLAKOY-KINIK (IZMIR) �lksel | - |
 | 2025.09.15 | 13:19:01 | 3.1 | 8 | 38.3348 | 27.2585 | BELENBASI-BUCA (IZMIR) �lksel | - |
 | 2025.09.15 | 10:14:54 | 1.7 | 9.4 | 38.1395 | 27.395 | TORBALI (IZMIR) �lksel | - |
-| 2025.09.15 | 06:42:13 | 1.3 | 15.3 | 38.2942 | 27.341 | DOGANCILAR-BUCA (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
 
@@ -82,18 +81,6 @@
 - **Büyüklükler:** MD: -, ML: 1.7, MW: -
 - **Tercih Edilen Büyüklük:** 1.7
 - **Yer:** TORBALI (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 5. Deprem
-
-- **Tarih ve Saat:** 2025.09.15 06:42:13
-- **ISO Zaman:** 2025-09-15T03:42:13.000Z
-- **Konum:** 38.2942, 27.341
-- **Derinlik:** 15.3 km
-- **Büyüklükler:** MD: -, ML: 1.3, MW: -
-- **Tercih Edilen Büyüklük:** 1.3
-- **Yer:** DOGANCILAR-BUCA (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
