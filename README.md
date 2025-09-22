@@ -1,20 +1,20 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 22.09.2025 03:48:58
+**Son Güncelleme:** 22.09.2025 04:32:51
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 22.09.2025 03:48:58
+**Son Veri Çekme:** 22.09.2025 04:32:51
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 3
+**Toplam Deprem Sayısı:** 2
 
 ## Veri Aralığı
 
-- **En Eski Deprem:** 18.09.2025 01:05:28
+- **En Eski Deprem:** 18.09.2025 23:23:50
 - **En Yeni Deprem:** 20.09.2025 04:31:49
-- **Veri Aralığı:** 17.09.2025 - 20.09.2025
+- **Veri Aralığı:** 18.09.2025 - 20.09.2025
 
 ## Özet İstatistikler
 
@@ -22,8 +22,8 @@
 - **En Düşük Büyüklük:** 1.5
 - **Ortalama Büyüklük:** 1.50
 - **En Derin:** 8.6 km
-- **En Sığ:** 5 km
-- **Ortalama Derinlik:** 6.33 km
+- **En Sığ:** 5.4 km
+- **Ortalama Derinlik:** 7.00 km
 
 ## Deprem Listesi
 
@@ -31,7 +31,6 @@
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.09.20 | 04:31:49 | 1.5 | 5.4 | 39.0888 | 27.2213 | KASIKCI-BERGAMA (IZMIR) �lksel | - |
 | 2025.09.18 | 23:23:50 | 1.5 | 8.6 | 38.3925 | 27.89 | HORZUM-ODEMIS (IZMIR) �lksel | - |
-| 2025.09.18 | 01:05:28 | 1.5 | 5 | 39.012 | 27.5167 | YAYLAKOY-KINIK (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
 
@@ -56,18 +55,6 @@
 - **Büyüklükler:** MD: -, ML: 1.5, MW: -
 - **Tercih Edilen Büyüklük:** 1.5
 - **Yer:** HORZUM-ODEMIS (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 3. Deprem
-
-- **Tarih ve Saat:** 2025.09.18 01:05:28
-- **ISO Zaman:** 2025-09-17T22:05:28.000Z
-- **Konum:** 39.012, 27.5167
-- **Derinlik:** 5 km
-- **Büyüklükler:** MD: -, ML: 1.5, MW: -
-- **Tercih Edilen Büyüklük:** 1.5
-- **Yer:** YAYLAKOY-KINIK (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
