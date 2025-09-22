@@ -1,20 +1,20 @@
 # Kandilli Rasathanesi İzmir Deprem Raporu
 
-**Son Güncelleme:** 23.09.2025 01:04:32
+**Son Güncelleme:** 23.09.2025 01:34:38
 
 **Veri Kaynağı:** http://www.koeri.boun.edu.tr/scripts/lst0.asp
 
-**Son Veri Çekme:** 23.09.2025 01:04:32
+**Son Veri Çekme:** 23.09.2025 01:34:38
 
 **Filtre:** Sadece İzmir ve çevresi depremleri
 
-**Toplam Deprem Sayısı:** 2
+**Toplam Deprem Sayısı:** 1
 
 ## Veri Aralığı
 
-- **En Eski Deprem:** 20.09.2025 04:31:49
+- **En Eski Deprem:** 22.09.2025 17:07:03
 - **En Yeni Deprem:** 22.09.2025 17:07:03
-- **Veri Aralığı:** 20.09.2025 - 22.09.2025
+- **Veri Aralığı:** 22.09.2025 - 22.09.2025
 
 ## Özet İstatistikler
 
@@ -22,15 +22,14 @@
 - **En Düşük Büyüklük:** 1.5
 - **Ortalama Büyüklük:** 1.50
 - **En Derin:** 8 km
-- **En Sığ:** 5.4 km
-- **Ortalama Derinlik:** 6.70 km
+- **En Sığ:** 8 km
+- **Ortalama Derinlik:** 8.00 km
 
 ## Deprem Listesi
 
 | Tarih | Saat | Büyüklük | Derinlik (km) | Enlem | Boylam | Konum | Durum |
 |-------|------|----------|---------------|-------|--------|-------|-------|
 | 2025.09.22 | 17:07:03 | 1.5 | 8 | 39.097 | 27.3133 | DUNDARLI-KINIK (IZMIR) �lksel | - |
-| 2025.09.20 | 04:31:49 | 1.5 | 5.4 | 39.0888 | 27.2213 | KASIKCI-BERGAMA (IZMIR) �lksel | - |
 
 ## Detaylı Bilgiler
 
@@ -43,18 +42,6 @@
 - **Büyüklükler:** MD: -, ML: 1.5, MW: -
 - **Tercih Edilen Büyüklük:** 1.5
 - **Yer:** DUNDARLI-KINIK (IZMIR) �lksel
-- **Durum:** -
-- **Kaynak:** KOERI
-
-### 2. Deprem
-
-- **Tarih ve Saat:** 2025.09.20 04:31:49
-- **ISO Zaman:** 2025-09-20T01:31:49.000Z
-- **Konum:** 39.0888, 27.2213
-- **Derinlik:** 5.4 km
-- **Büyüklükler:** MD: -, ML: 1.5, MW: -
-- **Tercih Edilen Büyüklük:** 1.5
-- **Yer:** KASIKCI-BERGAMA (IZMIR) �lksel
 - **Durum:** -
 - **Kaynak:** KOERI
 
